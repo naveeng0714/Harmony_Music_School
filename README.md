@@ -1,41 +1,56 @@
-# Harmony Music School Management System
+# 🎵 Harmony Music School Management System (C++ Advanced Version)
 
-This is a command-line application written in **modern C++ (C++17)** that simulates a basic record management system for a music school. 
-It showcases good software design practices using object-oriented principles, modular architecture, and file-based persistence.
-
----
-
-##  Features
-
--  **Student Management** – Enroll students and view details.
--  **Tuition Fee Tracking** – Record and manage fee payments.
--  **Instrument & Accessory Purchase Records** – Log items purchased by students.
--  **Learning Progress Tracking** – Track learning levels, notes, and progression.
--  **Certifications** – Manage and record course completions and certificates.
--  **File Persistence (Pluggable)** – Data saving hooks implemented per module.
--  **CMake Build System** – Easily portable and buildable on Linux systems.
+Welcome to the **Harmony Music School Management System**, a modular C++ application designed for managing the day-to-day operations of a music school. This system tracks student admissions, tuition fee payments, instrument and accessory purchases, learning progress, and certifications.
 
 ---
 
-##  Build Instructions
+## 📌 Features
 
-###  Prerequisites
-- C++17 or higher
-- `cmake` and `g++` installed on your system
+✅ **Student Management**  
+- Add and manage students  
+- Assign unique IDs  
+- Store admission details  
 
-###  Build & Run
+✅ **Tuition Fee Tracking**  
+- Record total fee, amount paid  
+- Calculate balance  
+- Persisted in `fees.txt`
+
+✅ **Instrument & Accessory Purchase**  
+- Supports both instruments and accessories  
+- Stores item name, type, price, date  
+- Stored in `purchases.txt`
+
+✅ **Learning Progress Tracking**  
+- Tracks levels (Beginner, Intermediate, Advanced)  
+- Progress notes and timestamps  
+- Stored in `progress.txt`
+
+✅ **Certification Records**  
+- Stores certifications achieved  
+- Includes course name, cert ID, and date  
+- Stored in `certifications.txt`
+
+---
+
+## 💡 Technologies Used
+
+- **C++17**
+- **CMake** for build automation
+- **OOP Principles**: Encapsulation, Modularity, Abstraction
+- **Advanced C++**: `std::shared_ptr`, `std::map`, `std::vector`, RAII, const correctness
+
+---
+
+## 🛠️ Build Instructions
+
+### 🔧 Requirements
+- A C++17 compatible compiler (e.g., `g++ >= 9`)
+- `cmake >= 3.10`
+
+### 🔨 Build
 ```bash
-# Clone or extract the repo
-cd HarmonyMusicSchool_CPP_Advanced
-
-# Create a build directory
-mkdir build && cd build
-
-# Configure the project
+mkdir build
+cd build
 cmake ..
-
-# Build the executable
 make
-
-# Run the application
-./HarmonyMusicSchool
