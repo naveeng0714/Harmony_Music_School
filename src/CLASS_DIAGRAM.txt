@@ -1,0 +1,35 @@
++-----------------------+                +----------------------+
+|   Student             |<>------------- |   FeeRecord          |
+|-----------------------|                |----------------------|
+| - id: int             |                | - studentId: int     |
+| - name: string        |                | - totalFee: double   |
+| - instrument: string  |                | - paid: double       |
+| - level: string       |                |----------------------|
+| - admissionYear: int  |                | +input(), toCSV()    |
+|-----------------------|                | +fromCSV()           |
+| +input(), display()   |                | +getBalance()        |
+| +toCSV(), fromCSV()   |                +----------------------+
++-----------------------+
+
+          ^
+          |
+          | uses (shared_ptr)
+          |
++------------------------+                +------------------------+
+|   StudentManager       |                |   FeeManager           |
+|------------------------|                |------------------------|
+| - students: map<int,   |                | - fees: unordered_map< |
+|   shared_ptr<Student>> |                |   int, FeeRecord>      |
+|------------------------|                |------------------------|
+| +load(), save(),       |                | +load(), save(),       |
+| +addStudent(), print() |                | +addFee(), getFee()    |
++------------------------+                +------------------------+
+
+             +--------------------------------------------+
+             |         class SchoolSystem (Main App)      |
+             |--------------------------------------------|
+             | - studentMgr: StudentManager               |
+             | - feeMgr: FeeManager                       |
+             |--------------------------------------------|
+             | +run()                                     |
+             +--------------------------------------------+
