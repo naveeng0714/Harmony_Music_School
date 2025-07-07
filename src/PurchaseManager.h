@@ -1,6 +1,7 @@
 #pragma once
 #include "PurchaseRecord.h"
 #include <vector>
+#include <filesystem>
 
 namespace harmony
 {

@@ -1,6 +1,7 @@
 #pragma once
 #include "LearningProgress.h"
 #include <vector>
+#include <filesystem>
 
 namespace harmony
 {

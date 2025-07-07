@@ -43,7 +43,6 @@ namespace harmony
         }
 
         // Write the data to the file
-        std::ofstream fout(filename);
         for (const auto &c : certifications)
         {
             fout << c.toCSV() << "\n";

@@ -19,10 +19,10 @@ namespace harmony
         CertificationManager certMgr;
 
         const std::string studentFile = "../data/students.txt";
-        const std::string feeFile = "./data/fees.txt";
-        const std::string purchaseFile = "./data/purchases.txt";
-        const std::string progressFile = "./data/progress.txt";
-        const std::string certificationsFile = "./data/certifications.txt";
+        const std::string feeFile = "../data/fees.txt";
+        const std::string purchaseFile = "../data/purchases.txt";
+        const std::string progressFile = "../data/progress.txt";
+        const std::string certificationsFile = "../data/certifications.txt";
 
         void showMenu();
         void handleChoice(int choice);
